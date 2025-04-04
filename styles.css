@@ -3,14 +3,16 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: transparent; /* Hintergrundfarbe auf transparent setzen */
-    height: 100%; /* Stellen Sie sicher, dass die Seite 100% der Höhe des Viewports einnimmt */
-    margin: 0; /* Entfernt Standard-Abstände */
-}
+    height: 100%; /* Stellen Sie sicher, dass die Seite 100% der HÃ¶he des Viewports einnimmt */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}}
 
 /* Titel Container */
 .title-container {
     text-align: center; /* Optional: Titel horizontal zentrieren */
-    font-size: 13pt; /* Angemessene Schriftgröße für den Titel */
+    font-size: 13pt; /* Angemessene SchriftgrÃ¶ÃŸe fÃ¼r den Titel */
     z-index: 10; /* Sicherstellen, dass der Titel immer oben bleibt */
 }
 
@@ -22,7 +24,7 @@ html, body {
     align-items: center; /* Horizontal zentrieren */
     position: relative;
     width: 100%;
-    height: 100vh; /* Setze Höhe auf 100% des Viewports */
+    height: 100vh; /* Setze HÃ¶he auf 100% des Viewports */
 }
 
 /* Fahrzeuginformationen (Name und Kilometerstand) */
@@ -34,14 +36,14 @@ html, body {
     text-align: center; /* Optional: Text horizontal zentrieren */
     position: absolute;
     width: 100%; /* Der Container nimmt die volle Breite ein */
-    height: 70%; /* Die Höhe nimmt 70% des Containers ein */
+    height: 70%; /* Die HÃ¶he nimmt 70% des Containers ein */
     top: 50%; /* Vertikal mittig innerhalb von .car-display */
     transform: translateY(-50%); /* Korrektur der Position, um den Container genau zu zentrieren */
 }
 
 /* Fahrzeug ID und Kilometerstand */
 #car-id, #car-km, .km-value {
-    margin: 0; /* Entfernt eventuell vorhandene Ränder */
+    margin: 0; /* Entfernt eventuell vorhandene RÃ¤nder */
 }
 
 /* Kilometerstand zentrieren */
@@ -69,7 +71,7 @@ html, body {
     transform: translateY(-50%); /* Korrektur, damit es exakt in der Mitte bleibt */
 }
 
-/* Grafiken für Navigation */
+/* Grafiken fÃ¼r Navigation */
 .nav-graphic {
     position: absolute;
     top: 50%; /* Vertikal zentrieren */
@@ -87,13 +89,13 @@ html, body {
     right: 20px; /* Abstand vom rechten Rand */
 }
 
-/* Optional: Hover-Effekt für Grafiken */
+/* Optional: Hover-Effekt fÃ¼r Grafiken */
 .nav-graphic:hover {
-    opacity: 0.8; /* Heller machen beim Überfahren mit der Maus */
+    opacity: 0.8; /* Heller machen beim Ãœberfahren mit der Maus */
 }
 
 .nav-graphic:active {
-    opacity: 0.6; /* Etwas dunkler, wenn sie gedrückt wird */
+    opacity: 0.6; /* Etwas dunkler, wenn sie gedrÃ¼ckt wird */
 }
 
 /* Fahrzeuggrafiken (unten fixiert) */
@@ -102,22 +104,24 @@ html, body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     z-index: -1; /* Bild bleibt hinter dem Inhalt */
     background-size: contain;
     background-position: bottom center;
+    background-repeat: no-repeat;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
-/* Farbänderung für jedes Fahrzeug */
+/* FarbÃ¤nderung fÃ¼r jedes Fahrzeug */
 .car-background.smart {
-    background-color: #FA8B9E; /* Beispiel Hintergrundfarbe für Smart */
+    background-color: #FA8B9E; /* Beispiel Hintergrundfarbe fÃ¼r Smart */
     background-repeat: no-repeat; /* Verhindert die Wiederholung des Hintergrundbildes */
-    background-image: url('smart-graphic.png'); /* Deine Grafik für Smart */
+    background-image: url('smart-graphic.png'); /* Deine Grafik fÃ¼r Smart */
 }
 
 .car-background.id3 {
-    background-color: #A1CAFD; /* Beispiel Hintergrundfarbe für ID.3 */
+    background-color: #A1CAFD; /* Beispiel Hintergrundfarbe fÃ¼r ID.3 */
     background-repeat: no-repeat; /* Verhindert die Wiederholung des Hintergrundbildes */
 
-    background-image: url('id3-graphic.png'); /* Deine Grafik für ID.3 */
+    background-image: url('id3-graphic.png'); /* Deine Grafik fÃ¼r ID.3 */
 }
