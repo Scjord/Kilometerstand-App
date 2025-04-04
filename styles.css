@@ -1,0 +1,123 @@
+ /* Allgemeine HTML und Body Einstellungen */
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    background-color: transparent; /* Hintergrundfarbe auf transparent setzen */
+    height: 100%; /* Stellen Sie sicher, dass die Seite 100% der Höhe des Viewports einnimmt */
+    margin: 0; /* Entfernt Standard-Abstände */
+}
+
+/* Titel Container */
+.title-container {
+    text-align: center; /* Optional: Titel horizontal zentrieren */
+    font-size: 13pt; /* Angemessene Schriftgröße für den Titel */
+    z-index: 10; /* Sicherstellen, dass der Titel immer oben bleibt */
+}
+
+/* Fahrzeuganzeige */
+.car-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikal zentrieren */
+    align-items: center; /* Horizontal zentrieren */
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Setze Höhe auf 100% des Viewports */
+}
+
+/* Fahrzeuginformationen (Name und Kilometerstand) */
+.auto-kilometer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikal zentrieren */
+    align-items: center; /* Horizontal zentrieren */
+    text-align: center; /* Optional: Text horizontal zentrieren */
+    position: absolute;
+    width: 100%; /* Der Container nimmt die volle Breite ein */
+    height: 70%; /* Die Höhe nimmt 70% des Containers ein */
+    top: 50%; /* Vertikal mittig innerhalb von .car-display */
+    transform: translateY(-50%); /* Korrektur der Position, um den Container genau zu zentrieren */
+}
+
+/* Fahrzeug ID und Kilometerstand */
+#car-id, #car-km, .km-value {
+    margin: 0; /* Entfernt eventuell vorhandene Ränder */
+}
+
+/* Kilometerstand zentrieren */
+#car-km {
+    font-size: 25pt;
+    font-weight: 100;
+}
+
+#car-id {
+    font-size: 25pt;
+    font-weight: bold;
+}
+
+
+/* Navigation Container */
+.navigation {
+    position: absolute;
+    top: 50%; /* Vertikal zentrieren */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* Abstand zwischen den Buttons */
+    padding: 0 20px;
+    box-sizing: border-box;
+    transform: translateY(-50%); /* Korrektur, damit es exakt in der Mitte bleibt */
+}
+
+/* Grafiken für Navigation */
+.nav-graphic {
+    position: absolute;
+    top: 50%; /* Vertikal zentrieren */
+    transform: translateY(-50%); /* Korrektur der vertikalen Position */
+    cursor: pointer; /* Zeigt an, dass es klickbar ist */
+}
+
+/* Linke Grafik */
+.nav-graphic-left {
+    left: 20px; /* Abstand vom linken Rand */
+}
+
+/* Rechte Grafik */
+.nav-graphic-right {
+    right: 20px; /* Abstand vom rechten Rand */
+}
+
+/* Optional: Hover-Effekt für Grafiken */
+.nav-graphic:hover {
+    opacity: 0.8; /* Heller machen beim Überfahren mit der Maus */
+}
+
+.nav-graphic:active {
+    opacity: 0.6; /* Etwas dunkler, wenn sie gedrückt wird */
+}
+
+/* Fahrzeuggrafiken (unten fixiert) */
+.car-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Bild bleibt hinter dem Inhalt */
+    background-size: contain;
+    background-position: bottom center;
+}
+
+/* Farbänderung für jedes Fahrzeug */
+.car-background.smart {
+    background-color: #FA8B9E; /* Beispiel Hintergrundfarbe für Smart */
+    background-repeat: no-repeat; /* Verhindert die Wiederholung des Hintergrundbildes */
+    background-image: url('smart-graphic.png'); /* Deine Grafik für Smart */
+}
+
+.car-background.id3 {
+    background-color: #A1CAFD; /* Beispiel Hintergrundfarbe für ID.3 */
+    background-repeat: no-repeat; /* Verhindert die Wiederholung des Hintergrundbildes */
+
+    background-image: url('id3-graphic.png'); /* Deine Grafik für ID.3 */
+}

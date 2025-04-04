@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrzeug Kilometerstand</title>
+    <!-- Google Fonts für Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Titel immer oben -->
+        <div class="title-container">
+            <h1 id="title">Leasingtracker</h1>
+        </div>
+    
+        <!-- Fahrzeuganzeige -->
+        <div id="autos">
+          <div class="car-background" id="car-background"></div>
+          <div class="auto-kilometer">
+            <div id="car-id"></div>
+            <div id="car-km" class="km-value"></div>
+          </div>
+        </div>
+    
+        <!-- Navigation für Fahrzeugwechsel -->
+        <div class="navigation">
+            <img src="Button-links.png" alt="Linke Navigation" class="nav-graphic nav-graphic-left" onclick="handleLeftClick()" id="prevBtn">
+            <img src="Button-rechts.png" alt="Rechte Navigation" class="nav-graphic nav-graphic-right" onclick="handleRightClick()" id="nextBtn">
+        </div>
+    </div>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>
