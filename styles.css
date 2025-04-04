@@ -30,7 +30,6 @@ html, body {
   flex-direction: column;
   justify-content: center;  /* vertikal zentrieren */
   align-items: center;      /* horizontal zentrieren */
-  position: relative;
 }
 
 .car-display {
