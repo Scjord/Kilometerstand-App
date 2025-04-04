@@ -12,6 +12,7 @@ html, body {
 /* Titel Container */
 .title-container {
     text-align: center; /* Optional: Titel horizontal zentrieren */
+    padding: 1rem;
     font-size: 13pt; /* Angemessene Schriftgröße für den Titel */
     z-index: 10; /* Sicherstellen, dass der Titel immer oben bleibt */
 }
