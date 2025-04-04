@@ -1,7 +1,7 @@
 {
   "name": "Kilometerstand-App",
   "short_name": "Kilometer",
-  "start_url": "./index.html",
+  "start_url": "/Kilometerstand-App/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007aff",
