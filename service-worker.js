@@ -1,12 +1,12 @@
 const CACHE_NAME = "kilometer-cache-v1";
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/style.css',
-  '/app.js',
-  '/manifest.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  '/Kilometerstand-App/',
+  '/Kilometerstand-App/index.html',
+  '/Kilometerstand-App/style.css',
+  '/Kilometerstand-App/app.js',
+  '/Kilometerstand-App/manifest.json',
+  '/Kilometerstand-App/icons/icon-192.png',
+  '/Kilometerstand-App/icons/icon-512.png'
 ];
 
 self.addEventListener("install", (event) => {
